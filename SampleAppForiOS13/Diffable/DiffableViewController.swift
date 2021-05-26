@@ -23,10 +23,7 @@ struct DiffableData: Codable, Hashable {
 
 class DiffableViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    let discovery: Discovery = {
-        let data = try! Data(contentsOf: Bundle.main.url(forResource: "movie_discovery", withExtension: "json")!)
-        return try! JSONDecoder().decode(Discovery.self, from: data)
-    }()
+    let discovery = Discovery(results: [])
     
     var dataSource = [DiffableData]()
     
