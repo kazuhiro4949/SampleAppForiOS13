@@ -10,11 +10,22 @@ import UIKit
 
 class CompositionalLayoutViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-    var dataSource: UICollectionViewDiffableDataSource<Section, Int>!
+    private var dataSource: UICollectionViewDiffableDataSource<Section, String>!
     
     enum Section: Int {
         case list
         case grid
+    }
+    
+    var iTunes = ITunes(results: []) {
+        didSet {
+            var snapshot = NSDiffableDataSourceSnapshot<Section, String>()
+            snapshot.deleteAllItems()
+            snapshot.appendSections([.list, .grid])
+            snapshot.appendItems(iTunes.results.enumerated().map { "\($0.offset): " + $0.element.trackName }, toSection: .list)
+            snapshot.appendItems(iTunes.results.enumerated().map { "\($0.offset): " + $0.element.artistName }, toSection: .grid)
+            dataSource.apply(snapshot)
+        }
     }
     
     override func viewDidLoad() {
@@ -22,11 +33,15 @@ class CompositionalLayoutViewController: UIViewController {
         configureLayout()
         configureDataSource()
         
-        var diffableDataSource = NSDiffableDataSourceSnapshot<Section, Int>()
-        diffableDataSource.appendSections([.list, .grid])
-        diffableDataSource.appendItems(Array(0...20), toSection: .list)
-        diffableDataSource.appendItems(Array(21...40), toSection: .grid)
-        dataSource.apply(diffableDataSource)
+        iTunes.results = (0...20).map {
+            .init(trackId: $0, trackName: "\($0)", artistName: "-\($0)")
+        }
+        
+        var snapshot = NSDiffableDataSourceSnapshot<Section, String>()
+        snapshot.appendSections([.list, .grid])
+        snapshot.appendItems(iTunes.results.map { $0.trackName }, toSection: .list)
+        snapshot.appendItems(iTunes.results.map { $0.artistName }, toSection: .grid)
+        dataSource.apply(snapshot)
     }
     
     func configureLayout() {
@@ -91,16 +106,16 @@ class CompositionalLayoutViewController: UIViewController {
     }
     
     func configureDataSource() {
-        let listCellRegistration = UICollectionView.CellRegistration<CompositionalLayoutListCell, Int>(cellNib: UINib(nibName: "CompositionalLayoutListCell", bundle: nil)) { cell, indexPath, item in
-            cell.textLabel.text = "\(item)"
+        let listCellRegistration = UICollectionView.CellRegistration<CompositionalLayoutListCell, String>(cellNib: UINib(nibName: "CompositionalLayoutListCell", bundle: nil)) { cell, indexPath, item in
+            cell.textLabel.text = item
         }
         
-        let gridCellRegistration = UICollectionView.CellRegistration<CompositionalLayoutGridCell, Int>(cellNib: UINib(nibName: "CompositionalLayoutGridCell", bundle: nil))  { cell, indexPath, item in
-            cell.textLabel.text = "\(item)"
+        let gridCellRegistration = UICollectionView.CellRegistration<CompositionalLayoutGridCell, String>(cellNib: UINib(nibName: "CompositionalLayoutGridCell", bundle: nil))  { cell, indexPath, item in
+            cell.textLabel.text = item
         }
         
         
-        dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView) { collectionView, indexPath, item in
+        dataSource = UICollectionViewDiffableDataSource<Section, String>(collectionView: collectionView) { collectionView, indexPath, item in
             switch Section(rawValue: indexPath.section) {
             case .list:
                 return collectionView.dequeueConfiguredReusableCell(using: listCellRegistration, for: indexPath, item: item)

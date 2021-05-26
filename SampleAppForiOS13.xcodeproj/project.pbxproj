@@ -26,6 +26,8 @@
 		305346FA265DF64600992676 /* CompositionalLayoutGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 305346F8265DF64600992676 /* CompositionalLayoutGridCell.xib */; };
 		305346FD265E069B00992676 /* CompositionalLayoutGridHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305346FB265E069B00992676 /* CompositionalLayoutGridHeaderView.swift */; };
 		305346FE265E069B00992676 /* CompositionalLayoutGridHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 305346FC265E069B00992676 /* CompositionalLayoutGridHeaderView.xib */; };
+		30534700265E1FC100992676 /* CombineViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305346FF265E1FC100992676 /* CombineViewController.storyboard */; };
+		30534702265E1FCD00992676 /* CombineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30534701265E1FCD00992676 /* CombineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		305346F8265DF64600992676 /* CompositionalLayoutGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompositionalLayoutGridCell.xib; sourceTree = "<group>"; };
 		305346FB265E069B00992676 /* CompositionalLayoutGridHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutGridHeaderView.swift; sourceTree = "<group>"; };
 		305346FC265E069B00992676 /* CompositionalLayoutGridHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompositionalLayoutGridHeaderView.xib; sourceTree = "<group>"; };
+		305346FF265E1FC100992676 /* CombineViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CombineViewController.storyboard; sourceTree = "<group>"; };
+		30534701265E1FCD00992676 /* CombineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,8 @@
 		305346E0265DD19500992676 /* Combine */ = {
 			isa = PBXGroup;
 			children = (
+				305346FF265E1FC100992676 /* CombineViewController.storyboard */,
+				30534701265E1FCD00992676 /* CombineViewController.swift */,
 			);
 			path = Combine;
 			sourceTree = "<group>";
@@ -306,6 +312,7 @@
 			files = (
 				305346BD265DD18F00992676 /* LaunchScreen.storyboard in Resources */,
 				305346F0265DEE1900992676 /* CompositionalLayoutViewController.storyboard in Resources */,
+				30534700265E1FC100992676 /* CombineViewController.storyboard in Resources */,
 				305346EA265DDC1E00992676 /* DiffableViewController.storyboard in Resources */,
 				305346BA265DD18F00992676 /* Assets.xcassets in Resources */,
 				305346B8265DD18D00992676 /* Main.storyboard in Resources */,
@@ -344,6 +351,7 @@
 				305346F5265DF26A00992676 /* CompositionalLayoutListCell.swift in Sources */,
 				305346B3265DD18D00992676 /* SceneDelegate.swift in Sources */,
 				305346EC265DDC2600992676 /* DiffableViewController.swift in Sources */,
+				30534702265E1FCD00992676 /* CombineViewController.swift in Sources */,
 				305346F9265DF64600992676 /* CompositionalLayoutGridCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
