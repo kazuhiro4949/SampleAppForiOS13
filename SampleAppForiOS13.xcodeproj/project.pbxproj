@@ -28,6 +28,9 @@
 		305346FE265E069B00992676 /* CompositionalLayoutGridHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 305346FC265E069B00992676 /* CompositionalLayoutGridHeaderView.xib */; };
 		30534700265E1FC100992676 /* CombineViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305346FF265E1FC100992676 /* CombineViewController.storyboard */; };
 		30534702265E1FCD00992676 /* CombineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30534701265E1FCD00992676 /* CombineViewController.swift */; };
+		30DE1AC9265E46F600EAFF6B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DE1AC8265E46F600EAFF6B /* ListView.swift */; };
+		30DE1ACB265E4C0300EAFF6B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DE1ACA265E4C0300EAFF6B /* ListViewController.swift */; };
+		30DE1ACD265E4C0D00EAFF6B /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30DE1ACC265E4C0D00EAFF6B /* ListViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		305346FC265E069B00992676 /* CompositionalLayoutGridHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompositionalLayoutGridHeaderView.xib; sourceTree = "<group>"; };
 		305346FF265E1FC100992676 /* CombineViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CombineViewController.storyboard; sourceTree = "<group>"; };
 		30534701265E1FCD00992676 /* CombineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewController.swift; sourceTree = "<group>"; };
+		30DE1AC8265E46F600EAFF6B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		30DE1ACA265E4C0300EAFF6B /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		30DE1ACC265E4C0D00EAFF6B /* ListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				305346E4265DD1B400992676 /* SwiftUI */,
-				305346E3265DD1AA00992676 /* CryptKit */,
 				305346E2265DD1A400992676 /* CollectionView */,
 				305346E1265DD19A00992676 /* Diffable */,
 				305346E0265DD19500992676 /* Combine */,
@@ -193,16 +198,12 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
-		305346E3265DD1AA00992676 /* CryptKit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CryptKit;
-			sourceTree = "<group>";
-		};
 		305346E4265DD1B400992676 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				30DE1AC8265E46F600EAFF6B /* ListView.swift */,
+				30DE1ACA265E4C0300EAFF6B /* ListViewController.swift */,
+				30DE1ACC265E4C0D00EAFF6B /* ListViewController.storyboard */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -313,6 +314,7 @@
 				305346BD265DD18F00992676 /* LaunchScreen.storyboard in Resources */,
 				305346F0265DEE1900992676 /* CompositionalLayoutViewController.storyboard in Resources */,
 				30534700265E1FC100992676 /* CombineViewController.storyboard in Resources */,
+				30DE1ACD265E4C0D00EAFF6B /* ListViewController.storyboard in Resources */,
 				305346EA265DDC1E00992676 /* DiffableViewController.storyboard in Resources */,
 				305346BA265DD18F00992676 /* Assets.xcassets in Resources */,
 				305346B8265DD18D00992676 /* Main.storyboard in Resources */,
@@ -346,8 +348,10 @@
 			files = (
 				305346B5265DD18D00992676 /* ViewController.swift in Sources */,
 				305346F2265DEE2800992676 /* CompositionalLayoutViewController.swift in Sources */,
+				30DE1AC9265E46F600EAFF6B /* ListView.swift in Sources */,
 				305346B1265DD18D00992676 /* AppDelegate.swift in Sources */,
 				305346FD265E069B00992676 /* CompositionalLayoutGridHeaderView.swift in Sources */,
+				30DE1ACB265E4C0300EAFF6B /* ListViewController.swift in Sources */,
 				305346F5265DF26A00992676 /* CompositionalLayoutListCell.swift in Sources */,
 				305346B3265DD18D00992676 /* SceneDelegate.swift in Sources */,
 				305346EC265DDC2600992676 /* DiffableViewController.swift in Sources */,
