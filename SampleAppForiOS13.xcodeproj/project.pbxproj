@@ -18,6 +18,14 @@
 		305346E8265DDAB400992676 /* movie_discovery.json in Resources */ = {isa = PBXBuildFile; fileRef = 305346E7265DDAB400992676 /* movie_discovery.json */; };
 		305346EA265DDC1E00992676 /* DiffableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305346E9265DDC1E00992676 /* DiffableViewController.storyboard */; };
 		305346EC265DDC2600992676 /* DiffableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305346EB265DDC2600992676 /* DiffableViewController.swift */; };
+		305346F0265DEE1900992676 /* CompositionalLayoutViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 305346EF265DEE1900992676 /* CompositionalLayoutViewController.storyboard */; };
+		305346F2265DEE2800992676 /* CompositionalLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305346F1265DEE2800992676 /* CompositionalLayoutViewController.swift */; };
+		305346F5265DF26A00992676 /* CompositionalLayoutListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305346F3265DF26A00992676 /* CompositionalLayoutListCell.swift */; };
+		305346F6265DF26A00992676 /* CompositionalLayoutListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 305346F4265DF26A00992676 /* CompositionalLayoutListCell.xib */; };
+		305346F9265DF64600992676 /* CompositionalLayoutGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305346F7265DF64600992676 /* CompositionalLayoutGridCell.swift */; };
+		305346FA265DF64600992676 /* CompositionalLayoutGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 305346F8265DF64600992676 /* CompositionalLayoutGridCell.xib */; };
+		305346FD265E069B00992676 /* CompositionalLayoutGridHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305346FB265E069B00992676 /* CompositionalLayoutGridHeaderView.swift */; };
+		305346FE265E069B00992676 /* CompositionalLayoutGridHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 305346FC265E069B00992676 /* CompositionalLayoutGridHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,14 @@
 		305346E7265DDAB400992676 /* movie_discovery.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movie_discovery.json; sourceTree = "<group>"; };
 		305346E9265DDC1E00992676 /* DiffableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiffableViewController.storyboard; sourceTree = "<group>"; };
 		305346EB265DDC2600992676 /* DiffableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableViewController.swift; sourceTree = "<group>"; };
+		305346EF265DEE1900992676 /* CompositionalLayoutViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompositionalLayoutViewController.storyboard; sourceTree = "<group>"; };
+		305346F1265DEE2800992676 /* CompositionalLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutViewController.swift; sourceTree = "<group>"; };
+		305346F3265DF26A00992676 /* CompositionalLayoutListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutListCell.swift; sourceTree = "<group>"; };
+		305346F4265DF26A00992676 /* CompositionalLayoutListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompositionalLayoutListCell.xib; sourceTree = "<group>"; };
+		305346F7265DF64600992676 /* CompositionalLayoutGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutGridCell.swift; sourceTree = "<group>"; };
+		305346F8265DF64600992676 /* CompositionalLayoutGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompositionalLayoutGridCell.xib; sourceTree = "<group>"; };
+		305346FB265E069B00992676 /* CompositionalLayoutGridHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutGridHeaderView.swift; sourceTree = "<group>"; };
+		305346FC265E069B00992676 /* CompositionalLayoutGridHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompositionalLayoutGridHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +175,14 @@
 		305346E2265DD1A400992676 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				305346EF265DEE1900992676 /* CompositionalLayoutViewController.storyboard */,
+				305346F1265DEE2800992676 /* CompositionalLayoutViewController.swift */,
+				305346F3265DF26A00992676 /* CompositionalLayoutListCell.swift */,
+				305346F4265DF26A00992676 /* CompositionalLayoutListCell.xib */,
+				305346F7265DF64600992676 /* CompositionalLayoutGridCell.swift */,
+				305346F8265DF64600992676 /* CompositionalLayoutGridCell.xib */,
+				305346FB265E069B00992676 /* CompositionalLayoutGridHeaderView.swift */,
+				305346FC265E069B00992676 /* CompositionalLayoutGridHeaderView.xib */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -281,9 +305,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				305346BD265DD18F00992676 /* LaunchScreen.storyboard in Resources */,
+				305346F0265DEE1900992676 /* CompositionalLayoutViewController.storyboard in Resources */,
 				305346EA265DDC1E00992676 /* DiffableViewController.storyboard in Resources */,
 				305346BA265DD18F00992676 /* Assets.xcassets in Resources */,
 				305346B8265DD18D00992676 /* Main.storyboard in Resources */,
+				305346FE265E069B00992676 /* CompositionalLayoutGridHeaderView.xib in Resources */,
+				305346FA265DF64600992676 /* CompositionalLayoutGridCell.xib in Resources */,
+				305346F6265DF26A00992676 /* CompositionalLayoutListCell.xib in Resources */,
 				305346E8265DDAB400992676 /* movie_discovery.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,9 +338,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				305346B5265DD18D00992676 /* ViewController.swift in Sources */,
+				305346F2265DEE2800992676 /* CompositionalLayoutViewController.swift in Sources */,
 				305346B1265DD18D00992676 /* AppDelegate.swift in Sources */,
+				305346FD265E069B00992676 /* CompositionalLayoutGridHeaderView.swift in Sources */,
+				305346F5265DF26A00992676 /* CompositionalLayoutListCell.swift in Sources */,
 				305346B3265DD18D00992676 /* SceneDelegate.swift in Sources */,
 				305346EC265DDC2600992676 /* DiffableViewController.swift in Sources */,
+				305346F9265DF64600992676 /* CompositionalLayoutGridCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
